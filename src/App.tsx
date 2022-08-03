@@ -8,11 +8,12 @@ import { Center } from './Center';
 export const App = () => {
   const [show, setShow] = useState(false);
   const { width, height } = useWindowSize();
+  const label = show ? 'Stop it!' : 'Let it rain!';
 
   return (
     <>
       <Center>
-        <Button onClick={() => setShow(!show)}>Let it rain!</Button>
+        <Button onClick={() => setShow(!show)}>{label}</Button>
       </Center>
       {/*
       // @ts-ignore */}
